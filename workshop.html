@@ -1,0 +1,2286 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>workshop</title></head><body><article class="markdown-body"><h3 id="an-introduction-to-containers-using-docker"><a name="user-content-an-introduction-to-containers-using-docker" href="#an-introduction-to-containers-using-docker" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>An introduction to containers using Docker</h3>
+<p>null puliya by <strong><em>Madhu Akula</em></strong><br />
+3rd June 2017</p>
+<h3 id="about-me"><a name="user-content-about-me" href="#about-me" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>About Me !</h3>
+<ul>
+<li>Automation Ninja at <a href="http://appsecco.com">Appsecco</a></li>
+<li>Fusion of Security, DevOps and Cloud</li>
+<li>Speaker &amp; Trainer at Defcon, All Day DevOps, DevSecCon, etc</li>
+<li>Found bugs in Google, Microsoft, Yahoo, etc</li>
+<li>Never ending learner</li>
+<li>Follow (or) Tweet to me <a href="https://twitter.com/madhuakula">@madhuakula</a></li>
+</ul>
+<h3 id="what-you-are-going-to-learn"><a name="user-content-what-you-are-going-to-learn" href="#what-you-are-going-to-learn" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What you are going to learn?</h3>
+<ul>
+<li>What is docker?</li>
+<li>How to use docker commands</li>
+<li>Working with Docker and docker-compose tools</li>
+<li>Creating and running your own container</li>
+<li>Best practices &amp; Tips</li>
+<li>Security Automation use cases</li>
+</ul>
+<h3 id="pre-requisites"><a name="user-content-pre-requisites" href="#pre-requisites" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pre-requisites</h3>
+<ul>
+<li>Basics of Linux commands usage</li>
+<li>Laptop with administrative privileges and support for running 64-bit virtual machines</li>
+<li>VirtualBox 5.x</li>
+<li>Minimum 4GB RAM and 15 GB disk space for VM and data</li>
+<li>Internet connection (If you wanted to everything hands-on)</li>
+</ul>
+<h3 id="import-virtual-machine-appliance"><a name="user-content-import-virtual-machine-appliance" href="#import-virtual-machine-appliance" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Import virtual machine appliance</h3>
+<ul>
+<li>Please import the virtual machine appliance from <code>null-puliya-docker/docker-training.ova</code></li>
+</ul>
+<h3 id="start-the-virtual-machine-login"><a name="user-content-start-the-virtual-machine-login" href="#start-the-virtual-machine-login" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Start the virtual machine &amp; Login</h3>
+<pre><code>Username: nel
+Password: nulldocker
+</code></pre>
+
+<h3 id="ssh-into-vm-from-host"><a name="user-content-ssh-into-vm-from-host" href="#ssh-into-vm-from-host" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SSH into VM from host</h3>
+<pre><code>Windows: Putty
+Linux/MAC: SSH client
+</code></pre>
+
+<pre><code>$ ssh nel@192.168.56.101
+</code></pre>
+
+<h3 id="history-lesson"><a name="user-content-history-lesson" href="#history-lesson" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>History Lesson</h3>
+<p><img alt="physical server" src="images/docker_Selection_002.png" /></p>
+<h3 id="problems-with-physical-servers"><a name="user-content-problems-with-physical-servers" href="#problems-with-physical-servers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Problems with physical servers</h3>
+<ul>
+<li>Slow deployment times</li>
+<li>Huge costs</li>
+<li>Wasted resources</li>
+<li>Difficult to scale</li>
+<li>Difficult to migrate</li>
+<li>Vendor lock in</li>
+</ul>
+<h3 id="hypervisor-based-virtualization"><a name="user-content-hypervisor-based-virtualization" href="#hypervisor-based-virtualization" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hypervisor-based virtualization</h3>
+<p><img alt="hypervisor" src="images/docker_Selection_003.png" /></p>
+<ul>
+<li>One physical server can contain multiple applications</li>
+<li>Each application runs in a virtual machine(VM)</li>
+</ul>
+<h3 id="benefits-of-vms"><a name="user-content-benefits-of-vms" href="#benefits-of-vms" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Benefits of VMs</h3>
+<ul>
+<li>Better resource pooling<ul>
+<li>One physical machine divided into multiple virtual machines</li>
+</ul>
+</li>
+<li>Easier to scale</li>
+<li>VM&rsquo;s in the cloud<ul>
+<li>Rapid elasticity</li>
+<li>Pay as you go mode</li>
+</ul>
+</li>
+<li>Kernel Security</li>
+</ul>
+<h3 id="limitations-of-vms"><a name="user-content-limitations-of-vms" href="#limitations-of-vms" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Limitations of VM&rsquo;s</h3>
+<ul>
+<li>Each VM still requires<ul>
+<li>CPU allocation</li>
+<li>Storage</li>
+<li>RAM</li>
+<li>An entire guest operating system</li>
+</ul>
+</li>
+<li>The more VM&rsquo;s you run, the more resources you need</li>
+<li>Guest OS means wasted resources</li>
+<li>Applications portability not guaranteed</li>
+</ul>
+<h3 id="introducing-containers"><a name="user-content-introducing-containers" href="#introducing-containers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Introducing Containers</h3>
+<blockquote>
+<p>Container based virtualization use the kernel on the host&rsquo;s operating system to run multiple guest instances</p>
+</blockquote>
+<ul>
+<li>Each guest instance is called a <code>container</code></li>
+<li>Each container has its own<ul>
+<li>Root File System</li>
+<li>Processes</li>
+<li>Memory</li>
+<li>Devices</li>
+<li>Network ports</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Containers" src="images/docker_Selection_004.png" /></p>
+<h3 id="containers-advantages-over-virtual-machines"><a name="user-content-containers-advantages-over-virtual-machines" href="#containers-advantages-over-virtual-machines" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Containers advantages over Virtual Machines</h3>
+<ul>
+<li>Containers are more lightweight</li>
+<li>No need to install guest OS</li>
+<li>Less CPU, RAM, Storage space required</li>
+<li>More containers per machine than VMs</li>
+<li>Greater portability</li>
+</ul>
+<h3 id="introducing-docker"><a name="user-content-introducing-docker" href="#introducing-docker" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Introducing Docker</h3>
+<p>Docker containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries – anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment.</p>
+<h3 id="how-docker-works"><a name="user-content-how-docker-works" href="#how-docker-works" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How Docker Works?</h3>
+<p><img alt="Docker and Linux Kernel" src="images/docker_Selection_005.png" /></p>
+<ul>
+<li><code>Docker</code> is the program that enables containers to be built, shipped and run.</li>
+<li>Docker Engine uses Linux Kernel namespaces and control groups, Namespaces gives us the isolated workspace (pid, net, ipc, mount, other)</li>
+</ul>
+<h3 id="multiple-productstools"><a name="user-content-multiple-productstools" href="#multiple-productstools" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Multiple products/tools</h3>
+<table>
+<thead>
+<tr>
+<th>component</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker Engine</td>
+<td>Core functions to Docker images to create and start Docker container.</td>
+</tr>
+<tr>
+<td>Docker Machine</td>
+<td>Automated Container Provisioning.</td>
+</tr>
+<tr>
+<td>Docker Swarm</td>
+<td>Allows container clustering and scheduling.</td>
+</tr>
+<tr>
+<td>Docker Compose</td>
+<td>Allows to define multi-container environments and operate.</td>
+</tr>
+<tr>
+<td>Docker Hub</td>
+<td>From Docker Docker operated registry.</td>
+</tr>
+<tr>
+<td>Docker Trusted Registry</td>
+<td>Allows to operate private Docker registries.</td>
+</tr>
+<tr>
+<td>Docker Cloud</td>
+<td>From Docker Docker driven environment. (Build, CI, Deploy)</td>
+</tr>
+<tr>
+<td>Docker Universal Control Plane</td>
+<td>Cluster Management for Docker environments.</td>
+</tr>
+<tr>
+<td>Kitematic</td>
+<td>Simple application for managing Docker containers</td>
+</tr>
+</tbody>
+</table>
+<h3 id="basics-terminology"><a name="user-content-basics-terminology" href="#basics-terminology" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Basics &amp; Terminology</h3>
+<ul>
+<li>Docker Image<ul>
+<li>Read only with os, libraries and apps</li>
+</ul>
+</li>
+<li>Docker Container<ul>
+<li>Stateful instance of image with a writable layer</li>
+</ul>
+</li>
+<li>Docker Registry<ul>
+<li>Repository of images</li>
+</ul>
+</li>
+<li>Docker Hub<ul>
+<li>Public docker registry</li>
+</ul>
+</li>
+</ul>
+<h3 id="enough-lets-start-docker"><a name="user-content-enough-lets-start-docker" href="#enough-lets-start-docker" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Enough! Let&rsquo;s start Docker</h3>
+<ul>
+<li>Docker is already installed in your VM</li>
+<li>If you want to install <a href="https://docs.docker.com/engine/installation/#supported-platforms"><a href="https://docs.docker.com/engine/installation/#supported-platforms"><a href="https://docs.docker.com/engine/installation/#supported-platforms">https://docs.docker.com/engine/installation/#supported-platforms</a></a></a></li>
+</ul>
+<h3 id="everyone-is-inside-vm"><a name="user-content-everyone-is-inside-vm" href="#everyone-is-inside-vm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Everyone is inside VM?</h3>
+<ul>
+<li>Let&rsquo;s test by running <code>sudo docker --version</code> command</li>
+</ul>
+<h3 id="why-sudo-before-docker-command"><a name="user-content-why-sudo-before-docker-command" href="#why-sudo-before-docker-command" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Why sudo before docker command?</h3>
+<ul>
+<li>To run docker commands we need <code>sudo</code> privileges.</li>
+<li>Add current user to docker group</li>
+</ul>
+<pre><code>$ sudo usermod -aG docker nel
+</code></pre>
+
+<h3 id="ssh-again-to-apply-changes"><a name="user-content-ssh-again-to-apply-changes" href="#ssh-again-to-apply-changes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SSH again to apply changes</h3>
+<ul>
+<li>Now run again the <code>docker --version</code> command without sudo</li>
+<li>Hence, if someone has access to docker group they can have super user privileges (root) : Security**</li>
+<li>We will use this for LAB purpose only</li>
+</ul>
+<h3 id="docker-workflow"><a name="user-content-docker-workflow" href="#docker-workflow" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Workflow</h3>
+<ul>
+<li>Client / Server architecture</li>
+<li>Client takes user inputs and send them to the daemon</li>
+<li>Daemon build, runs and distributes containers</li>
+<li>Client and daemon can run on the same host or on different hosts</li>
+<li>CLI client and GUI (Kitematic)</li>
+</ul>
+<h3 id="run-your-first-docker-container"><a name="user-content-run-your-first-docker-container" href="#run-your-first-docker-container" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Run your first docker container</h3>
+<pre><code>$ docker run hello-world
+</code></pre>
+
+<ul>
+<li><code>docker run</code> command send this command to engine</li>
+<li>Engine checks if the image available or not<ul>
+<li>If it&rsquo;s not available, it will pull from registry</li>
+<li>If it&rsquo;s available, it will run the command from local image</li>
+</ul>
+</li>
+</ul>
+<h3 id="docker-containers-images"><a name="user-content-docker-containers-images" href="#docker-containers-images" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker containers &amp; Images</h3>
+<p><img alt="Images and Containers" src="images/docker_Selection_009.png" /></p>
+<ul>
+<li>
+<p>Images</p>
+<ul>
+<li>Read only template used to create containers</li>
+<li>Built by you to other Docker users</li>
+<li>Stored in Docker hub or your local registry</li>
+</ul>
+</li>
+<li>
+<p>containers </p>
+<ul>
+<li>Isolated application platform</li>
+<li>Contains everything needed to run your application</li>
+<li>Based on one or more images</li>
+</ul>
+</li>
+</ul>
+<h3 id="registry-repository"><a name="user-content-registry-repository" href="#registry-repository" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Registry &amp; Repository</h3>
+<p><img alt="Registry and Repository Dockerhub" src="images/docker_Selection_010.png" /></p>
+<h3 id="what-is-docker-hub"><a name="user-content-what-is-docker-hub" href="#what-is-docker-hub" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What is Docker Hub?</h3>
+<ul>
+<li>Docker Hub is the public registry that contains a large number of images available for your use</li>
+</ul>
+<p><img alt="Docker Hub" src="images/docker_Selection_011.png" /></p>
+<h3 id="docker-search"><a name="user-content-docker-search" href="#docker-search" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Search</h3>
+<ul>
+<li>You can also search through all public available images in docker hub via </li>
+</ul>
+<pre><code>$ docker search wpscan
+</code></pre>
+
+<h3 id="docker-store"><a name="user-content-docker-store" href="#docker-store" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Store</h3>
+<ul>
+<li><a href="https://store.docker.com/"><a href="https://store.docker.com"><a href="https://store.docker.com">https://store.docker.com</a></a></a> is a  Trusted and Enterprise Ready Containers, Plugins, and Docker Editions</li>
+</ul>
+<h3 id="how-to-find-local-available-images"><a name="user-content-how-to-find-local-available-images" href="#how-to-find-local-available-images" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How to find local available images</h3>
+<pre><code>$ docker images
+</code></pre>
+
+<ul>
+<li>Images are specified by <code>repository:tag</code></li>
+<li>The same image may have multiple tags</li>
+<li>The default tag is <code>latest</code></li>
+<li>Look up the repository on Docker Hub to see what tags are available</li>
+</ul>
+<h3 id="running-docker-container"><a name="user-content-running-docker-container" href="#running-docker-container" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running docker container</h3>
+<pre><code>$ docker run [options] [image] [command] [args]
+</code></pre>
+
+<ul>
+<li>Image is specified with <code>repository:tag</code></li>
+</ul>
+<p>Example:</p>
+<pre><code>$ docker run ubuntu:14.04 echo &quot;Welcome to Ubuntu 14.04&quot;
+</code></pre>
+
+<h3 id="whats-inside-container"><a name="user-content-whats-inside-container" href="#whats-inside-container" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What&rsquo;s inside container?</h3>
+<pre><code>$ docker run ubuntu:14.04 ps ax
+</code></pre>
+
+<h3 id="container-with-terminal"><a name="user-content-container-with-terminal" href="#container-with-terminal" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Container with Terminal</h3>
+<ul>
+<li>Use <code>-i</code> and <code>-t</code> flags with docker run</li>
+<li>The <code>-i</code> flag tells docker to connect to STDIN on the container</li>
+<li>The <code>-t</code> flag specifies to get pseudo-terminal</li>
+<li><em>Note:</em> You need to run a terminal process as your command (e.g. /bin/bash)</li>
+</ul>
+<pre><code>$ docker run -i -t ubuntu:14.04 /bin/bash
+</code></pre>
+
+<h3 id="container-processes"><a name="user-content-container-processes" href="#container-processes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Container Processes</h3>
+<ul>
+<li>A container only runs as long as the process from your specified <code>docker run</code> command is running</li>
+<li>Your command&rsquo;s process is always <code>PID 1</code> inside the container</li>
+</ul>
+<p><img alt="Container Processes" src="images/docker_Selection_020.png" /></p>
+<h3 id="container-processes-example"><a name="user-content-container-processes-example" href="#container-processes-example" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Container Processes Example</h3>
+<pre><code>$ docker run -it ubuntu bash
+root@randomvalue:/# ps -ef
+</code></pre>
+
+<ul>
+<li>Exit the container with out closing <code>Ctrl + P + Q</code></li>
+</ul>
+<pre><code>$ ps -ef
+</code></pre>
+
+<h3 id="container-id"><a name="user-content-container-id" href="#container-id" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Container ID</h3>
+<ul>
+<li>Containers can be specified using their ID or name</li>
+<li>Long ID and short ID</li>
+<li>Short ID and name can be obtained using <code>docker ps</code> command to list containers</li>
+<li>Login ID obtained by inspecting a container <code>docker inspect</code></li>
+</ul>
+<h3 id="naming-containers"><a name="user-content-naming-containers" href="#naming-containers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Naming containers</h3>
+<ul>
+<li>You can create specific name for container before running</li>
+</ul>
+<pre><code>$ docker run --name sampleapp ubuntu:14.04 uname
+</code></pre>
+
+<h3 id="find-your-containers"><a name="user-content-find-your-containers" href="#find-your-containers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Find your containers</h3>
+<ul>
+<li>Use <code>docker ps</code> to list running containers</li>
+<li>The <code>-a</code> flag to list all containers (includes containers that are stopped)</li>
+</ul>
+<pre><code>$ docker ps
+$ docker ps -a
+</code></pre>
+
+<h3 id="running-in-detached-mode"><a name="user-content-running-in-detached-mode" href="#running-in-detached-mode" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running in Detached Mode</h3>
+<ul>
+<li>Also known as running in the background or as a daemon </li>
+<li>Use <code>-d</code> flag</li>
+<li>To observe output use <code>docker logs [container id]</code></li>
+</ul>
+<pre><code>$ docker run -d ubuntu:14.04 ping 127.0.0.1 -c 50
+
+$ docker logs [container id]
+
+$ docker logs -f [container id]
+</code></pre>
+
+<h3 id="running-docker-attach"><a name="user-content-running-docker-attach" href="#running-docker-attach" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running Docker attach</h3>
+<pre><code>$ docker run -d --name topdemo ubuntu:14.04 /usr/bin/top -b
+$ docker attach topdemo
+</code></pre>
+
+<h3 id="running-a-practical-container"><a name="user-content-running-a-practical-container" href="#running-a-practical-container" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running a practical container</h3>
+<ul>
+<li>Run a web application inside a container</li>
+<li>The <code>-P</code> flag to map container ports(all exposed) to host ports</li>
+</ul>
+<pre><code>$ docker run -d -P nginx:alpine
+
+$ docker ps
+</code></pre>
+
+<ul>
+<li>Now we can browse to the mapped port in our localhost</li>
+<li>Make a <code>curl</code> request to check </li>
+</ul>
+<pre><code>$ curl localhost:mapped port
+</code></pre>
+
+<h3 id="running-a-practical-container-contd"><a name="user-content-running-a-practical-container-contd" href="#running-a-practical-container-contd" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running a practical container (contd.)</h3>
+<ul>
+<li>To specify certain port for mapping</li>
+</ul>
+<pre><code>$ docker run -d -p 3000:80 nginx:alpine
+</code></pre>
+
+<pre><code>$ curl localhost:3000
+</code></pre>
+
+<ul>
+<li>You can also navigate to your browser with host IP address and port</li>
+</ul>
+<h3 id="image-layers"><a name="user-content-image-layers" href="#image-layers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Image Layers</h3>
+<ul>
+<li>Images are comprised of multiple layers</li>
+<li>A layer is also just another image</li>
+<li>Every image contains a base layer</li>
+<li>Docker uses a copy on write system</li>
+<li>Layers are read only</li>
+</ul>
+<p><img alt="image layers" src="images/docker_Selection_026.png" /></p>
+<h2 id="the-container-writeable-layer"><a name="user-content-the-container-writeable-layer" href="#the-container-writeable-layer" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>The container writeable layer</h2>
+<ul>
+<li>Docker creates a top writeable layer for containers</li>
+<li>Parent images are read only</li>
+<li>All changes are made at the writeable layer</li>
+</ul>
+<p><img alt="container writeable layer" src="images/docker_Selection_027.png" /></p>
+<h3 id="docker-commit"><a name="user-content-docker-commit" href="#docker-commit" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Commit</h3>
+<ul>
+<li><code>docker commit</code> command saves changes in a container as a new image </li>
+<li>Syntax</li>
+</ul>
+<pre><code>docker commit [options] [container ID] [repository:tag]
+</code></pre>
+
+<ul>
+<li>Repository name should be based on username/application</li>
+<li>Can reference the container with container name instead of ID</li>
+</ul>
+<h3 id="docker-commit-contd"><a name="user-content-docker-commit-contd" href="#docker-commit-contd" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Commit (contd.)</h3>
+<pre><code>$ docker run --name testingcommit -it ubuntu:14.04 bash
+
+# mkdir -p /data/important
+
+# echo &quot;this is important data&quot; &gt; /data/important/credentials.txt
+
+# exit
+
+$ docker ps -a
+
+$ docker commit testingcommit madhuakula/testapp:1.0
+
+$ docker images
+</code></pre>
+
+<h3 id="using-the-new-image"><a name="user-content-using-the-new-image" href="#using-the-new-image" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Using the new image</h3>
+<pre><code>$ docker run -it madhuakula/testapp:1.0 bash
+
+# cat /data/important/credentials.txt
+</code></pre>
+
+<h3 id="introducing-dockerfile"><a name="user-content-introducing-dockerfile" href="#introducing-dockerfile" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Introducing Dockerfile</h3>
+<blockquote>
+<p>A <code>Dockerfile</code> is a configuration file that contains instructions for building a Docker image</p>
+</blockquote>
+<ul>
+<li>Provides a more effective way to build images compared to using <code>docker commit</code></li>
+<li>Easily fits into your continuous integration and deployment process</li>
+</ul>
+<h3 id="dockerfile-instructions"><a name="user-content-dockerfile-instructions" href="#dockerfile-instructions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dockerfile instructions</h3>
+<ul>
+<li>Instructions specify what to do when building the image</li>
+<li><code>FROM</code> instruction specifies what the base image should be</li>
+<li><code>RUN</code> instruction specifies a command to execute</li>
+</ul>
+<pre><code># Example of a comment
+FROM ubuntu:14.04
+
+RUN apt-get update
+RUN apt-get install curl -y
+RUN apt-get install htop -y
+</code></pre>
+
+<h3 id="more-about-run-instruction"><a name="user-content-more-about-run-instruction" href="#more-about-run-instruction" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>More about <code>RUN</code> instruction</h3>
+<ul>
+<li>Each <code>RUN</code> instruction will execute the command on the top writeable layer and perform a commit of the image</li>
+<li>Can aggregate multiple <code>RUN</code> instructions by using <code>&amp;&amp;</code></li>
+</ul>
+<pre><code>RUN apt-get update &amp;&amp; apt-get install -y \
+    curl \
+    htop
+</code></pre>
+
+<h3 id="docker-build"><a name="user-content-docker-build" href="#docker-build" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Build</h3>
+<pre><code>docker build [options] [path]
+</code></pre>
+
+<ul>
+<li>Common option to tag the build</li>
+</ul>
+<pre><code>docker build -t [repository:tag] [path]
+</code></pre>
+
+<p>Example:</p>
+<pre><code># Build an image using current folder as context path
+$ docker build -t madhuakula/testimage:1.0 .
+
+# Build an image using `myproject` folder as context path
+$ docker build -t madhuakula/testimage:1.0 myproject
+</code></pre>
+
+<ul>
+<li>By default it looks for the <code>Dockerfile</code></li>
+<li>You can specify the different file using <code>-f</code> flag</li>
+</ul>
+<h3 id="exercise"><a name="user-content-exercise" href="#exercise" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Exercise</h3>
+<pre><code>$ mkdir first_image_build
+$ cd first_image_build
+</code></pre>
+
+<ul>
+<li>Create a Dockerfile using <code>vi Dockerfile</code></li>
+</ul>
+<pre><code>FROM ubuntu:14.04
+RUN apt-get update
+RUN apt-get install -y curl
+RUN apt-get install -y nmap
+</code></pre>
+
+<ul>
+<li>Then run the docker build command</li>
+</ul>
+<pre><code>$ docker build -t madhuakula/testimage:1.0 .
+</code></pre>
+
+<h3 id="exercise-contd"><a name="user-content-exercise-contd" href="#exercise-contd" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Exercise (contd.)</h3>
+<ul>
+<li>Verify by running the <code>docker images</code> command</li>
+</ul>
+<pre><code>$ docker images
+</code></pre>
+
+<ul>
+<li>Modify the Dockerfile using <code>vi Dockerfile</code></li>
+</ul>
+<pre><code>FROM ubuntu:14.04
+RUN apt-get update &amp;&amp; apt-get install -y \
+    curl \
+    vim
+</code></pre>
+
+<ul>
+<li>Run the docker build command again</li>
+</ul>
+<pre><code>$ docker build -t madhuakula/testimage:1.1 .
+</code></pre>
+
+<h3 id="cmd-instruction"><a name="user-content-cmd-instruction" href="#cmd-instruction" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CMD Instruction</h3>
+<ul>
+<li>CMD defines a default command to execute when a container is created</li>
+<li>CMD performs no action during the image build</li>
+<li>Shell format and EXEC format (JSON array)</li>
+<li>Can only be specified once in a Dockerfile</li>
+<li>Can be overridden at run time</li>
+</ul>
+<pre><code>Shell format
+CMD ping 127.0.0.1 -c 30
+
+Exec format
+CMD [&quot;ping&quot;, &quot;127.0.0.1&quot;, &quot;-c&quot;, &quot;30&quot;]
+</code></pre>
+
+<h3 id="example"><a name="user-content-example" href="#example" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h3>
+<ul>
+<li>Modify the Dockerfile using <code>vim Dockerfile</code></li>
+</ul>
+<pre><code>FROM ubuntu:14.04
+RUN apt-get update &amp;&amp; apt-get install -y \
+    curl 
+
+CMD [&quot;ping&quot;, &quot;127.0.0.1&quot;, &quot;-c&quot;, &quot;10&quot;]
+</code></pre>
+
+<ul>
+<li>Run the docker build command again</li>
+</ul>
+<pre><code>$ docker build -t madhuakula/testimage:1.2 .
+</code></pre>
+
+<ul>
+<li>Check the CMD by running docker image</li>
+</ul>
+<pre><code>$ docker run madhuakula/testimage:1.2
+</code></pre>
+
+<ul>
+<li>Override the CMD instruction</li>
+</ul>
+<pre><code>$ docker run madhuakula/testimage:1.2 echo &quot;hello world&quot;
+</code></pre>
+
+<h3 id="entrypoint-instruction"><a name="user-content-entrypoint-instruction" href="#entrypoint-instruction" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ENTRYPOINT Instruction</h3>
+<ul>
+<li>Defines the command that will run when a container is executed</li>
+<li>Run time arguments and CMD instruction are passed as parameters to the ENTRYPOINT instruction</li>
+<li>Shell and EXEC form</li>
+<li>EXEC form preferred as shell form cannot accept arguments at run time </li>
+<li>Container essentially runs as an executable</li>
+</ul>
+<pre><code>ENTRYPOINT [&quot;ping&quot;]
+</code></pre>
+
+<h3 id="example_1"><a name="user-content-example_1" href="#example_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h3>
+<ul>
+<li>Modify the Dockerfile using <code>vim Dockerfile</code></li>
+</ul>
+<pre><code>FROM ubuntu:14.04
+RUN apt-get update &amp;&amp; apt-get install -y \
+    curl 
+
+ENTRYPOINT [&quot;ping&quot;]
+</code></pre>
+
+<ul>
+<li>Run the docker build command again</li>
+</ul>
+<pre><code>$ docker build -t madhuakula/testimage:1.3 .
+</code></pre>
+
+<ul>
+<li>Check the ENTRYPOINT by running docker image</li>
+</ul>
+<pre><code>$ docker run madhuakula/testimage:1.3
+
+$ docker run madhuakula/testimage:1.3 127.0.0.1 -c 5
+</code></pre>
+
+<h3 id="managing-images-and-containers"><a name="user-content-managing-images-and-containers" href="#managing-images-and-containers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Managing Images and Containers</h3>
+<p><strong>Start and Stop Containers</strong></p>
+<ul>
+<li>Find your containers with <code>docker ps</code> and note the ID or name</li>
+<li><code>docker start</code> and <code>docker stop</code></li>
+</ul>
+<pre><code>List all containers
+$ docker ps -a
+
+Start a container using the container ID
+$ docker start &lt;container ID&gt;
+
+Stop a container using the container ID
+$ docker stop &lt;container ID&gt;
+</code></pre>
+
+<h3 id="example_2"><a name="user-content-example_2" href="#example_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h3>
+<pre><code>$ docker run --name samplenginxapp  -d nginx:alpine
+
+$ docker ps
+
+$ docker stop samplenginxapp
+
+$ docker ps
+
+$ docker ps -a
+
+$ docker start samplenginxapp
+</code></pre>
+
+<h3 id="getting-terminal-access"><a name="user-content-getting-terminal-access" href="#getting-terminal-access" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Getting terminal access</h3>
+<ul>
+<li>Use <code>docker exec</code> command to start another process within a container</li>
+<li>Execute <code>/bin/bash</code> to get a bash shell (or) <code>/bin/sh</code></li>
+</ul>
+<pre><code>docker exec -i -t [container ID] /bin/bash
+</code></pre>
+
+<ul>
+<li>First run a container</li>
+</ul>
+<pre><code>$ docker run --name nginxapp -d nginx:alpine
+</code></pre>
+
+<ul>
+<li>Exiting from the terminal will not terminate the container</li>
+</ul>
+<pre><code>$ docker exec -it nginxapp /bin/sh
+</code></pre>
+
+<h3 id="deleting-containers"><a name="user-content-deleting-containers" href="#deleting-containers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Deleting Containers</h3>
+<ul>
+<li>Can only delete containers that have been stopped</li>
+<li>Use <code>docker rm</code> command</li>
+<li>Specify the container ID or name</li>
+</ul>
+<h3 id="example_3"><a name="user-content-example_3" href="#example_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h3>
+<pre><code>$ docker run --name anotherapp -d nginx:alpine
+
+$ docker ps
+
+$ docker stop anotherapp
+
+$ docker ps -a
+
+$ docker rm anotherapp
+
+$ docker ps -a
+</code></pre>
+
+<h3 id="deleting-local-images"><a name="user-content-deleting-local-images" href="#deleting-local-images" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Deleting local images</h3>
+<pre><code>docker rmi [image ID]
+(or)
+docker rmi [repo:tag]
+</code></pre>
+
+<ul>
+<li>If an image is tagged multiple items, we have to remove each tag</li>
+</ul>
+<h3 id="example_4"><a name="user-content-example_4" href="#example_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h3>
+<pre><code>$ docker images
+
+$ docker rmi madhuakula/testimage:1.1
+
+$ docker images
+
+$ docker rmi f26a6ce913b7
+
+$ docker images
+</code></pre>
+
+<h3 id="docker-hub-repositories"><a name="user-content-docker-hub-repositories" href="#docker-hub-repositories" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Hub Repositories</h3>
+<ul>
+<li>Users can create their own repositories on Docker Hub</li>
+<li>Public and Private</li>
+<li>Push local images to a repository</li>
+</ul>
+<h3 id="pushing-images-to-docker-hub"><a name="user-content-pushing-images-to-docker-hub" href="#pushing-images-to-docker-hub" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pushing images to Docker Hub</h3>
+<pre><code>docker push [repo:tag]
+</code></pre>
+
+<ul>
+<li>Local repo must have same name and tag as the Docker Hub repo</li>
+</ul>
+<pre><code>$ docker push madhuakula/testingimage:1.0
+</code></pre>
+
+<h3 id="tagging-images"><a name="user-content-tagging-images" href="#tagging-images" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tagging Images</h3>
+<ul>
+<li>Used to rename a local image repository before pushing to Docker Hub</li>
+</ul>
+<pre><code>docker tag [image ID] [repo:tag]
+
+OR
+
+docker tag [local repo:tag] [Docker Hub repo:tag]
+</code></pre>
+
+<p><strong>Examples:</strong></p>
+<pre><code>$ docker tag f26a6ce913b7 madhuakula/testexample:1.0
+
+OR
+
+$ docker tag madhuakula/testimage:1.1 madhuakula/testanotherexample
+</code></pre>
+
+<h3 id="volumes"><a name="user-content-volumes" href="#volumes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Volumes</h3>
+<blockquote>
+<p>A volume is a designated directory in a container, which is designed to persist data, independent of the container&rsquo;s life cycle</p>
+</blockquote>
+<ul>
+<li>Volume changes are excluded when updating an image</li>
+<li>Persist when a container is deleted</li>
+<li>Can be mapped to a host folder</li>
+<li>Can be shared between containers</li>
+</ul>
+<h3 id="mount-a-volume"><a name="user-content-mount-a-volume" href="#mount-a-volume" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mount a Volume</h3>
+<ul>
+<li>Volumes are mounted when creating or executing a container</li>
+<li>Can be mapped to a host directory</li>
+<li>Volume paths specified must be absolute</li>
+</ul>
+<pre><code>Execute a new container and mount the folder /myvolume into it's file system
+
+$ docker run -d -P -v /myvolume nginx:alpine
+
+Execute a new container and map the /data/src folder from the host into the /test/src folder in the container
+
+$ docker run -i -t -v /data/src:/test/src nginx:alpine sh
+</code></pre>
+
+<h3 id="volumes-in-dockefile"><a name="user-content-volumes-in-dockefile" href="#volumes-in-dockefile" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Volumes in Dockefile</h3>
+<ul>
+<li>VOLUME instruction creates a mount point</li>
+<li>Can specify arguments JSON array or string</li>
+<li>Cannot map volumes to host directories</li>
+<li>Volumes are initialized when the container is executed</li>
+</ul>
+<pre><code># string example
+VOLUME /myvol
+
+# string example with multiple volumes
+VOLUME /www/website1.com /www/website2.com
+
+# JSON example
+VOLUME [&quot;myvol&quot;, &quot;myvol2&quot;]
+</code></pre>
+
+<h3 id="use-of-volumes"><a name="user-content-use-of-volumes" href="#use-of-volumes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Use of volumes</h3>
+<ul>
+<li>De-couple the data that is stored from the container which created the data</li>
+<li>Good for sharing data between containers<ul>
+<li>Can setup a data containers which has a volume you mount in other containers</li>
+</ul>
+</li>
+<li>Mounting folders from the host is good for testing purposes but generally not recommended for production use</li>
+</ul>
+<h3 id="docker-networking"><a name="user-content-docker-networking" href="#docker-networking" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Networking</h3>
+<p><strong>Mapping Ports</strong></p>
+<ul>
+<li>Recall: containers have their own network and IP address</li>
+<li>Map exposed container ports to ports on the host machine</li>
+<li>Ports can be manually mapped or auto mapped</li>
+<li>Uses the <code>-p</code> and <code>-P</code> parameters in <code>docker run</code></li>
+</ul>
+<pre><code>Map port 80 on the container to 8080 on the host
+$ docker run -d -p 8080:80 nginx:alpine
+</code></pre>
+
+<h3 id="auto-mapping-ports"><a name="user-content-auto-mapping-ports" href="#auto-mapping-ports" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Auto mapping ports</h3>
+<ul>
+<li>Use the <code>-P</code> option in <code>docker run</code></li>
+<li>Automatically maps exposed ports in the container to a port number in the host</li>
+<li>Host port numbers used to go from <code>49153</code> to <code>65535</code></li>
+<li>Only works for ports defined in the <code>EXPOSE</code> instruction</li>
+</ul>
+<pre><code>Auto map ports exposed by the NGINX container to a port value on the host
+$ docker run -d -P nginx:alpine
+</code></pre>
+
+<h3 id="linking-containers"><a name="user-content-linking-containers" href="#linking-containers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Linking Containers</h3>
+<blockquote>
+<p>Linking is a communication method between containers which allows them to securely transfer data from one to another</p>
+</blockquote>
+<ul>
+<li>Source and recipient containers</li>
+<li>Recipient containers have access to data on source containers</li>
+<li>Links are established based on container names</li>
+</ul>
+<p><img alt="docker linking" src="images/docker_Selection_032.png" /></p>
+<h3 id="creating-a-link"><a name="user-content-creating-a-link" href="#creating-a-link" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Creating a Link</h3>
+<ul>
+<li>Create the source container first</li>
+<li>
+<p>Create the recipient container to use <code>--link</code> option</p>
+</li>
+<li>
+<p><em>Best practice</em> - give your containers meaningful names</p>
+</li>
+</ul>
+<pre><code>Create the source container using the postgres
+$ docker run -d --name database mysql:5.7
+
+Create the recipient container and link it
+$ docker run -d -P --name website --link database:db nginx:alpine
+</code></pre>
+
+<ul>
+<li>check <code>/etc/hosts</code> of <code>website</code> container for more reference</li>
+</ul>
+<pre><code>$ docker run -it website sh
+
+# cat /etc/hosts
+</code></pre>
+
+<h3 id="uses-of-linking"><a name="user-content-uses-of-linking" href="#uses-of-linking" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Uses of Linking</h3>
+<ul>
+<li>Containers can talk to each other without having to expose ports to the host</li>
+<li>Essential for micro service applications architecture</li>
+<li>Example:<ul>
+<li>Container with Tomcat running</li>
+<li>Container with MySQL running</li>
+<li>Application on Tomcat needs to connect to MySQL</li>
+</ul>
+</li>
+</ul>
+<h3 id="docker-logs"><a name="user-content-docker-logs" href="#docker-logs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker logs</h3>
+<pre><code>$ docker logs -f --tail 2 &lt;Container NAME&gt;
+</code></pre>
+
+<h3 id="inspecting-a-container"><a name="user-content-inspecting-a-container" href="#inspecting-a-container" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Inspecting a Container</h3>
+<pre><code>$ docker inspect &lt;container name&gt;
+
+OR
+
+$ docker inspect &lt;container name&gt; | grep IPAddress
+
+OR
+
+$ docker inspect &lt;container name&gt; | jq .
+</code></pre>
+
+<h3 id="docker-history"><a name="user-content-docker-history" href="#docker-history" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker history</h3>
+<pre><code>docker history [OPTIONS] IMAGE
+</code></pre>
+
+<pre><code>$ docker history nginx:alpine
+</code></pre>
+
+<h3 id="docker-diff"><a name="user-content-docker-diff" href="#docker-diff" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Diff</h3>
+<p>List the changed files and directories in a containers filesystem There are 3 events that are listed in the diff:</p>
+<ul>
+<li>A - Add</li>
+<li>D - Delete</li>
+<li>C - Change</li>
+</ul>
+<p>For example:</p>
+<pre><code>$ docker run --name checkingimage  -it ubuntu:14.04 bash
+
+# mkdir -p /data/output
+# echo &quot;modifed this stuff&quot; &gt; /.dockerenv
+# exit
+
+$ docker diff checkingimage
+</code></pre>
+
+<h3 id="docker-stats"><a name="user-content-docker-stats" href="#docker-stats" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker stats</h3>
+<ul>
+<li>You can get stats from containers using</li>
+</ul>
+<pre><code>$ docker run --name statstest -d nginx:alpine
+
+$ docker run -d nginx:alpine
+
+$ docker ps
+
+$ docker stats statstest
+
+$ docker stats --all
+</code></pre>
+
+<h3 id="docker-top"><a name="user-content-docker-top" href="#docker-top" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker top</h3>
+<pre><code>docker top CONTAINER [ps OPTIONS]
+</code></pre>
+
+<p>Example:<br />
+<pre><code>$ docker run --name toptestcontainer -d nginx:alpine
+
+$ docker top toptestcontainer
+</code></pre></p>
+<h3 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a></h3>
+<h3 id="traditional-continuous-integration"><a name="user-content-traditional-continuous-integration" href="#traditional-continuous-integration" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Traditional Continuous Integration</h3>
+<p><img alt="Traditional CI" src="images/docker_Selection_033.png" /></p>
+<h3 id="using-docker-in-ci"><a name="user-content-using-docker-in-ci" href="#using-docker-in-ci" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Using Docker in CI</h3>
+<ul>
+<li>CI server builds Docker image and pushes into Docker Hub</li>
+</ul>
+<p><img alt="docker ci" src="images/docker_Selection_034.png" /></p>
+<h3 id="docker-hub-auto-build"><a name="user-content-docker-hub-auto-build" href="#docker-hub-auto-build" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Hub Auto Build</h3>
+<ul>
+<li>Docker Hub detects commits to source repository and builds the image </li>
+<li>Container is run during image build</li>
+<li>Testing done inside container</li>
+</ul>
+<p><img alt="docker ci github" src="images/docker_Selection_035.png" /></p>
+<h3 id="example_5"><a name="user-content-example_5" href="#example_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h3>
+<ul>
+<li>Login to your Github account</li>
+<li>Create a new repository <code>null-docker-puliya-test</code></li>
+<li>Add a <code>Dockerfile</code> in that repository</li>
+</ul>
+<pre><code>FROM ubuntu:16.04
+MAINTAINER Madhu Akula &lt;madhu.akula@hotmail.com&gt;
+
+RUN apt-get update &amp;&amp; apt-get install curl \
+            htop -y
+</code></pre>
+
+<ul>
+<li>Login to your Dockerhub account and create automated build</li>
+<li>Link your github and select the github repository <code>null-docker-puliya-test</code></li>
+<li>Then give the details and trigger build.</li>
+</ul>
+<h3 id="example-contd"><a name="user-content-example-contd" href="#example-contd" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example (contd.)</h3>
+<ul>
+<li>Update the Dockerfile in Github</li>
+</ul>
+<pre><code>FROM ubuntu:16.04
+MAINTAINER Madhu Akula &lt;madhu.akula@hotmail.com&gt;
+
+RUN apt-get update &amp;&amp; apt-get install curl \
+            nmap htop
+
+ENTRYPOINT [&quot;ping&quot;]
+</code></pre>
+
+<ul>
+<li>Now check your Dockerhub, it will automatically trigger the new build</li>
+</ul>
+<h3 id="docker-private-registry"><a name="user-content-docker-private-registry" href="#docker-private-registry" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Private Registry</h3>
+<ul>
+<li>Docker Registry can be available  as a Docker container <code>registry:2</code></li>
+<li>Create a directory in host system <code>mkdir -p /tmp/localregistrydata</code>, which we will mount inside the registry container as volume.</li>
+<li>This volume will contain all the registry data.</li>
+</ul>
+<pre><code>$ docker run -d -p 5000:5000 -v /tmp/localregistrydata-data:/var/lib/registry
+registry:latest
+</code></pre>
+
+<h3 id="pushing-images-to-private-registry-demo"><a name="user-content-pushing-images-to-private-registry-demo" href="#pushing-images-to-private-registry-demo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pushing Images to Private Registry (Demo)</h3>
+<ul>
+<li>Tag an image before pushing</li>
+</ul>
+<pre><code>$ docker tag &lt;image_id&gt; localhost:5000/newimage
+</code></pre>
+
+<ul>
+<li>Push to the registry</li>
+</ul>
+<pre><code>$ docker push localhost:5000/newimage
+</code></pre>
+
+<ul>
+<li>Pulling the image from private registry</li>
+</ul>
+<pre><code>$ docker pull localhost:5000/newimage
+</code></pre>
+
+<h3 id="docker-networking-drivers"><a name="user-content-docker-networking-drivers" href="#docker-networking-drivers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Networking Drivers</h3>
+<ul>
+<li>All apps are differently designed. Some of them required additional access like wordpress with mysql</li>
+<li>So Docker networking will play key role in working with multiple containers</li>
+</ul>
+<h3 id="docker-networking-link-example"><a name="user-content-docker-networking-link-example" href="#docker-networking-link-example" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Networking (Link Example)</h3>
+<ul>
+<li>We have already seen <code>--link</code> command flag</li>
+</ul>
+<pre><code>$ docker run -d --name netcontainer1 alpine sleep 1000
+$ docker run --name netcontainer2 --link netcontainer1 -i -t alpine /bin/sh
+</code></pre>
+
+<ul>
+<li>The netcontainer2 will be able to ping netcontainer1 using its name, which is <code>netcontainer1</code></li>
+</ul>
+<h3 id="docker-networking-drivers-contd"><a name="user-content-docker-networking-drivers-contd" href="#docker-networking-drivers-contd" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Networking Drivers (contd.)</h3>
+<ul>
+<li>By default, Docker installation create three networks<ul>
+<li>None (gets no network connection, good for security stuff)</li>
+<li>Host (inside the container would be identical to the hosts, like network interface names and ip addresses.)</li>
+<li>Bridge (by default,  allows containers in the same bridge network to<br />
+access to each other. It spans within the host system)</li>
+</ul>
+</li>
+<li>Overlay network is the most commonly used in networking. (access <br />
+between containers running in different hosts. It requires a key-value store like etcd, consul (or) zookeeper) </li>
+</ul>
+<h3 id="docker-bridge-network-example-isolation"><a name="user-content-docker-bridge-network-example-isolation" href="#docker-bridge-network-example-isolation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Bridge Network Example (ISOLATION)</h3>
+<ul>
+<li>Creating bridge network</li>
+</ul>
+<pre><code>$ docker network create --driver bridge different_network
+</code></pre>
+
+<ul>
+<li>Running container in this bridge network</li>
+</ul>
+<pre><code>$ docker run --name bridgecontianer --network=different_network -d -i -t alpine /bin/sh
+</code></pre>
+
+<ul>
+<li>Run another container with default bridge network and ping <code>bridgecontianer</code></li>
+</ul>
+<pre><code>$ docker run -it alpine /bin/sh
+
+# ping bridgecontianer
+</code></pre>
+
+<h3 id="docker-logging"><a name="user-content-docker-logging" href="#docker-logging" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Logging</h3>
+<ul>
+<li>Docker supports different logging methods for storing and shipping<br />
+logs.</li>
+<li>Default the messages are written as a json</li>
+<li>Here are some of them in many drivers docker support, json-file, syslog, journald, gelf, fluentd, splunk.</li>
+</ul>
+<h3 id="writing-awesome-dockerfiles"><a name="user-content-writing-awesome-dockerfiles" href="#writing-awesome-dockerfiles" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Writing Awesome Dockerfiles</h3>
+<ul>
+<li><a href="https://docs.docker.com/engine/reference/builder/#dockerignore-file">.dockerignore</a></li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#from">FROM</a> Sets the Base Image for subsequent instructions.</li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#/maintainer-deprecated">MAINTAINER (deprecated - use LABEL instead)</a> Set the Author field of the generated images.</li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#run">RUN</a> execute any commands in a new layer on top of the current image and commit the results.</li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#cmd">CMD</a> provide defaults for an executing container.</li>
+</ul>
+<h3 id="writing-awesome-dockerfiles-contd"><a name="user-content-writing-awesome-dockerfiles-contd" href="#writing-awesome-dockerfiles-contd" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Writing Awesome Dockerfiles (contd.)</h3>
+<ul>
+<li><a href="https://docs.docker.com/engine/reference/builder/#expose">EXPOSE</a> informs Docker that the container listens on the specified network ports at runtime.  NOTE: does not actually make ports accessible.</li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#env">ENV</a> sets environment variable.</li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#add">ADD</a> copies new files, directories or remote file to container.  Invalidates caches. Avoid <code>ADD</code> and use <code>COPY</code> instead.</li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#copy">COPY</a> copies new files or directories to container.  Note that this only copies as root, so you have to chown manually regardless of your USER / WORKDIR setting.  See <a href="https://github.com/moby/moby/issues/30110">https://github.com/moby/moby/issues/30110</a></li>
+</ul>
+<h3 id="writing-awesome-dockerfiles-contd_1"><a name="user-content-writing-awesome-dockerfiles-contd_1" href="#writing-awesome-dockerfiles-contd_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Writing Awesome Dockerfiles (contd.)</h3>
+<ul>
+<li><a href="https://docs.docker.com/engine/reference/builder/#entrypoint">ENTRYPOINT</a> configures a container that will run as an executable.</li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#volume">VOLUME</a> creates a mount point for externally mounted volumes or other containers.</li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#user">USER</a> sets the user name for following RUN / CMD / ENTRYPOINT commands.</li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#workdir">WORKDIR</a> sets the working directory.</li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#arg">ARG</a> defines a build-time variable.</li>
+</ul>
+<h3 id="writing-awesome-dockerfiles-contd_2"><a name="user-content-writing-awesome-dockerfiles-contd_2" href="#writing-awesome-dockerfiles-contd_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Writing Awesome Dockerfiles (contd.)</h3>
+<ul>
+<li><a href="https://docs.docker.com/engine/reference/builder/#onbuild">ONBUILD</a> adds a trigger instruction when the image is used as the base for another build.</li>
+<li><a href="https://docs.docker.com/engine/reference/builder/#stopsignal">STOPSIGNAL</a> sets the system call signal that will be sent to the container to exit.</li>
+<li><a href="https://docs.docker.com/engine/userguide/labels-custom-metadata/">LABEL</a> apply key/value metadata to your images, containers, or daemons.</li>
+</ul>
+<h3 id="docker-compose"><a name="user-content-docker-compose" href="#docker-compose" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Compose</h3>
+<ul>
+<li>Docker Compose is a tool to define and run multi container applications</li>
+<li>It contains Dockerfiles, images, environment variables, volumes, ports, etc.</li>
+<li>It&rsquo;s written in YAML format</li>
+</ul>
+<h3 id="features"><a name="user-content-features" href="#features" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Features</h3>
+<ul>
+<li>Multiple isolated environments on a single host</li>
+<li>Preserve volume data when containers are created</li>
+<li>Only recreate containers that have changed</li>
+<li>Variables and moving a composition between environments</li>
+</ul>
+<h3 id="docker-compose-usage"><a name="user-content-docker-compose-usage" href="#docker-compose-usage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Compose usage</h3>
+<ul>
+<li>Define your app’s environment with a <code>Dockerfile</code> so it can be reproduced anywhere.</li>
+<li>Define the services that make up your app in <code>docker-compose.yml</code> so they can be run together in an isolated environment.</li>
+<li>Lastly, run <code>docker-compose up</code> and Compose will start and run your entire app.</li>
+</ul>
+<h3 id="docker-compose-example-overview"><a name="user-content-docker-compose-example-overview" href="#docker-compose-example-overview" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Compose Example Overview</h3>
+<pre><code>version: '3'
+services:
+  web:
+    build: .
+    ports:
+    - &quot;5000:5000&quot;
+    volumes:
+    - .:/code
+    - logvolume01:/var/log
+    links:
+    - redis
+  redis:
+    image: redis
+volumes:
+  logvolume01: {}
+</code></pre>
+
+<h3 id="docker-compose-wordpress-example"><a name="user-content-docker-compose-wordpress-example" href="#docker-compose-wordpress-example" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Compose Wordpress Example</h3>
+<ul>
+<li>Create a new directory <code>mkdir composewordpress</code> and <code>cd composewordpress</code></li>
+<li>Create <code>vi docker-compose.yml</code> file</li>
+</ul>
+<pre><code>version: '3'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     ports:
+       - &quot;8000:80&quot;
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+volumes:
+    db_data:
+</code></pre>
+
+<h3 id="running-docker-compose"><a name="user-content-running-docker-compose" href="#running-docker-compose" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running docker-compose</h3>
+<ul>
+<li>Run <code>docker-compose up -d db</code></li>
+<li>Wait for a <strong><em>minute</em></strong> to start the database and configuration</li>
+<li>Then run <code>docker-compose up -d wordpress</code></li>
+<li>Now browse to <code>http://hostIP:8000</code> in your browser</li>
+</ul>
+<h3 id="check-compose-status"><a name="user-content-check-compose-status" href="#check-compose-status" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Check compose status</h3>
+<pre><code>$ docker-compose ps
+
+$ docker ps
+</code></pre>
+
+<h3 id="how-about-scaling-stuff"><a name="user-content-how-about-scaling-stuff" href="#how-about-scaling-stuff" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How about scaling stuff?</h3>
+<pre><code>$ docker-compose scale wordpress=3
+
+$ docker-compose ps
+</code></pre>
+
+<h3 id="security-automation-use-cases"><a name="user-content-security-automation-use-cases" href="#security-automation-use-cases" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Security Automation use cases</h3>
+<ul>
+<li>Let&rsquo;s run our <code>wpscan</code> against running wordpress site</li>
+</ul>
+<pre><code>$ docker run -it --rm wpscanteam/wpscan -u http://YOURHOSTIP:8000
+</code></pre>
+
+<h3 id="security-automation-use-cases-contd"><a name="user-content-security-automation-use-cases-contd" href="#security-automation-use-cases-contd" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Security Automation use cases (contd.)</h3>
+<ul>
+<li>How long does it take you to setup vulnerable application?</li>
+</ul>
+<pre><code>$ docker run --name dsvw -p 5000:8000 -d appsecco/dsvw
+</code></pre>
+
+<ul>
+<li>Navigate to <code>http://YOURHOSTIP:5000</code> in your browser</li>
+</ul>
+<h3 id="security-automation-use-cases-contd_1"><a name="user-content-security-automation-use-cases-contd_1" href="#security-automation-use-cases-contd_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Security Automation use cases (contd.)</h3>
+<ul>
+<li>There are many more use cases and containers already available<ul>
+<li>Exploits (<a href="https://hub.docker.com/r/vulnerables">https://hub.docker.com/r/vulnerables</a>)</li>
+<li>Vulnerable Apps (<a href="https://hub.docker.com/u/owasp/">https://hub.docker.com/u/owasp/</a>)</li>
+<li>Kali Linux (<a href="https://hub.docker.com/r/kalilinux/kali-linux-docker/">https://hub.docker.com/r/kalilinux/kali-linux-docker/</a>)</li>
+<li>OWASP ZAP (<a href="https://hub.docker.com/r/owasp/zap2docker-stable/">https://hub.docker.com/r/owasp/zap2docker-stable/</a>)</li>
+<li>Many more</li>
+</ul>
+</li>
+</ul>
+<h3 id="security-automation-use-cases-contd_2"><a name="user-content-security-automation-use-cases-contd_2" href="#security-automation-use-cases-contd_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Security Automation use cases (contd.)</h3>
+<ul>
+<li>Adding security into DevOps pipeline using containers</li>
+<li>Setting up &amp; Building vulnerable labs</li>
+<li>Isolated test environment (kind of sandbox)</li>
+<li>Many more.</li>
+</ul>
+<h3 id="security-automation-use-cases-contd_3"><a name="user-content-security-automation-use-cases-contd_3" href="#security-automation-use-cases-contd_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Security Automation use cases (contd.)</h3>
+<p><strong><em>What do you think of Docker, Any use cases?</em></strong></p>
+<h3 id="docker-swarm"><a name="user-content-docker-swarm" href="#docker-swarm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Swarm</h3>
+<blockquote>
+<p>The cluster management and orchestration features embedded in the Docker Engine are built using SwarmKit. </p>
+</blockquote>
+<p>A swarm is a cluster of Docker engines, or nodes, where you deploy services. The Docker Engine CLI and API include commands to manage swarm nodes (e.g., add or remove nodes), and deploy and orchestrate services across the swarm.</p>
+<h3 id="docker-swarm-features"><a name="user-content-docker-swarm-features" href="#docker-swarm-features" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Docker Swarm Features</h3>
+<ul>
+<li>Cluster management integrated with Docker Engine</li>
+<li>Decentralized design</li>
+<li>Declarative service model</li>
+<li>Scaling</li>
+<li>Desired state reconciliation</li>
+<li>Multi-host networking</li>
+<li>Service discovery</li>
+<li>Load balancing</li>
+<li>Secure by default</li>
+<li>Rolling updates</li>
+</ul>
+<h3 id="popular-alternatives-for-docker-swarm"><a name="user-content-popular-alternatives-for-docker-swarm" href="#popular-alternatives-for-docker-swarm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Popular Alternatives for Docker Swarm</h3>
+<ul>
+<li>Kubernetes aka k8s</li>
+<li>Apache Mesos and Marathon</li>
+<li>Nomad</li>
+<li>DC/OS</li>
+<li>Many more.</li>
+</ul>
+<h3 id="the-easiest-way-to-manage-docker-portainer"><a name="user-content-the-easiest-way-to-manage-docker-portainer" href="#the-easiest-way-to-manage-docker-portainer" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>The easiest way to manage docker (Portainer)</h3>
+<blockquote>
+<p>Portainer is an open-source lightweight management UI which allows you to easily manage your Docker host or Swarm cluster.</p>
+</blockquote>
+<h3 id="running-portainer"><a name="user-content-running-portainer" href="#running-portainer" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running Portainer</h3>
+<ul>
+<li>It&rsquo;s as simple as running the below command</li>
+</ul>
+<pre><code>$ docker run --name portainer -d -p 9000:9000 -v &quot;/var/run/docker.sock:/var/run/docker.sock&quot; portainer/portainer
+</code></pre>
+
+<h3 id="auto-completion-of-docker-commands"><a name="user-content-auto-completion-of-docker-commands" href="#auto-completion-of-docker-commands" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Auto completion of docker commands</h3>
+<p><a href="https://github.com/j-bennet/wharfee">https://github.com/j-bennet/wharfee</a></p>
+<h3 id="resources-references"><a name="user-content-resources-references" href="#resources-references" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Resources &amp; References</h3>
+<ul>
+<li><a href="https://training.docker.com/introduction-to-docker">https://training.docker.com/introduction-to-docker</a></li>
+<li><a href="https://training.docker.com/docker-fundamentals">https://training.docker.com/docker-fundamentals</a></li>
+<li><a href="https://docs.docker.com/engine/getstarted/">https://docs.docker.com/engine/getstarted/</a></li>
+<li><a href="https://github.com/wsargent/docker-cheat-sheet">https://github.com/wsargent/docker-cheat-sheet</a></li>
+<li><a href="https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/">https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/</a></li>
+<li><a href="http://training.play-with-docker.com">http://training.play-with-docker.com</a></li>
+<li><a href="https://www.katacoda.com/courses/docker">https://www.katacoda.com/courses/docker</a></li>
+</ul>
+<h3 id="thanks-feedback"><a name="user-content-thanks-feedback" href="#thanks-feedback" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Thanks &amp; Feedback</h3>
+<p><strong>Madhu Akula</strong><br />
+<a href="https://twitter.com/madhuakula">@madhuakula</a></p></article></body></html>
